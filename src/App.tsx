@@ -18,7 +18,7 @@ function App() {
       <header className="App-header">
         <div>{`Alert was shown: ${counter} times`}</div>
         <button onClick={() => handleShowAlert(22)}>Show Alert</button>
-        <td onClick={()=> window.open("https://github.com/OutcomerTom/Daft_test/", "_blank")}>Go to repo</td>
+        <td onClick={()=> window.open("https://github.com/OutcomerTom/my-app/", "_blank")}>Go to repo</td>
       </header>
     </div>
   )
