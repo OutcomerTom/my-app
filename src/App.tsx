@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import logo from './logo.svg';
+import { InputForm } from './InputForm';
 import './App.css';
 
 function App() {
@@ -19,6 +19,8 @@ function App() {
         <div>{`Alert was shown: ${counter} times`}</div>
         <button onClick={() => handleShowAlert(22)}>Show Alert</button>
         <td onClick={()=> window.open("https://github.com/OutcomerTom/my-app/", "_blank")}>Go to repo</td>
+      <InputForm defaultValue={'Hello form'}
+      />
       </header>
     </div>
   )
