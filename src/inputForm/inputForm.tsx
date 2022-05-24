@@ -18,11 +18,11 @@ export const InputForm = (props?:InputFormProps) => {
         setInputValue(event.target.value);
         if ( messageLength < 3 || messageLength > 20 ) {
             if ( messageLength < 3) {
-                setErrorMessage('UserName is to short')
+                setErrorMessage('UserName is too short')
             }
 
             if ( messageLength > 20 ) {
-                setErrorMessage('UserName is to long')
+                setErrorMessage('UserName is too long')
             }
 
           setDisplayError( true )
@@ -36,20 +36,20 @@ export const InputForm = (props?:InputFormProps) => {
         if (formReadyToSubmit) {
         localStorage.setItem(storageFormKey, inputValue)
         }
-    }, [])
+    }, [inputValue])
 
     useEffect( () => {
-        let valuToSet = '';
+        let valueToSet = '';
         const localStorageData = localStorage.getItem(storageFormKey)
         if (!!localStorageData) {
-            setInputValue(localStorageData)
+            valueToSet = localStorageData;
         } else {
             if (!!props?.defaultValue) {
-                valuToSet = props?.defaultValue;
+                valueToSet = props?.defaultValue;
             }
         }
 
-        setInputValue(valuToSet);
+        setInputValue(valueToSet);
 
     }, [])
 
