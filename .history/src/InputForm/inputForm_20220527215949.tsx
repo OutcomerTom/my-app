@@ -36,7 +36,7 @@ export const InputForm = (props?: InputFormProps) => {
     if (formReadyToSubmit) {
       localStorage.setItem(storageFormKey, inputValue);
     }
-  }, [formReadyToSubmit, inputValue]);
+  }, [inputValue]);
 
   useEffect(() => {
     let valueToSet = "";
@@ -50,7 +50,7 @@ export const InputForm = (props?: InputFormProps) => {
     }
 
     setInputValue(valueToSet);
-  }, [props?.defaultValue]);
+  }, []);
 
   return (
     <div>
