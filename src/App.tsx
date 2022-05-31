@@ -1,31 +1,25 @@
-import React, {useState, useEffect} from 'react';
-import { InputForm } from './InputForm';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { FormPage } from "./FormPage";
+import { HomePage } from "./HomePage";
+import { CounterPage } from "./CounterPage";
+import { Navigation } from "./Navigation";
+import { routesPaths } from "./routes";
+import "./App.css";
 
 function App() {
-  const [counter, setCounter] = useState<number>(0);
-
-  const handleShowAlert = (value: number):void => {
-    alert("Helllo react")
-    setCounter( counter + 1)
-  }
-    useEffect( () => {
-      setCounter( 22 )
-    }, [])
-
   return (
     <div className="App">
-      <header className="App-header">
-        <div>{`Alert was shown: ${counter} times`}</div>
-        <button onClick={() => handleShowAlert(22)}>Show Alert</button>
-        <hr/>
-        <td onClick={()=> window.open("https://github.com/OutcomerTom/my-app/", "_blank")}>Go to repo</td>
-        <hr/>
-      <InputForm defaultValue={'Hello form'}
-      />
-      </header>
+      <Navigation />
+      <Routes>
+        <Route path={"/"} element={<HomePage />} />
+        <Route path={"*"} element={<div>404</div>} />
+        <Route path={`/${routesPaths.about}`} element={<div>About</div>} />
+        <Route path={"/CounterPage"} element={<CounterPage />} />
+        <Route path={"/form"} element={<FormPage />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
 export default App;
