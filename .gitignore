@@ -6,6 +6,7 @@
 .pnp.js
 .prettierrc
 .history
+.history/*
 
 # testing
 /coverage
