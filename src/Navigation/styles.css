@@ -19,9 +19,9 @@
   display: none;
 }
 
-.Navigation-mobile.MuiSvgIcon-root {
+/* .Navigation-mobile.MuiSvgIcon-root {
   display: none;
-}
+} */
 
 @media (max-width: 996px) {
   .Navigation {
