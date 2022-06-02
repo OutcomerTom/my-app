@@ -9,7 +9,7 @@ export const Counter = () => {
     setCounter(counter + 1);
   };
   useEffect(() => {
-    setCounter(22);
+    setCounter(0);
   }, []);
 
   return (
@@ -18,7 +18,7 @@ export const Counter = () => {
       <hr />
       <div>{`Alert was shown: ${counter} times`}</div>
       <hr />
-      <Button onClick={() => handleShowAlert(22)} variant="outlined">
+      <Button onClick={() => handleShowAlert(0)} variant="outlined">
         Show Alert
       </Button>
     </>
