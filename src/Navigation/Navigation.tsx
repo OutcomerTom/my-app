@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { routesPaths } from "../routes";
-import "./styles.css";
+import "./Navigation.css";
 
 export const Navigation = () => {
   const [navigationVisible, setNavigationVisible] = useState<boolean>(true);

@@ -5,11 +5,13 @@ import { HomePage } from "./HomePage";
 import { CounterPage } from "./CounterPage";
 import { Navigation } from "./Navigation";
 import { routesPaths } from "./routes";
+import ResponsiveAppBar from "./components/AppBar/AppBar";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <ResponsiveAppBar />
       <Navigation />
       <Routes>
         <Route path={"/"} element={<HomePage />} />
