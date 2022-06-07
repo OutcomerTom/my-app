@@ -1,1 +1,1 @@
-export * from "./RickAPI";
+export { RickData } from "./RickAPI";

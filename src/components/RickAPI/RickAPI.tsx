@@ -8,9 +8,10 @@ type resultProps = {
   image: string;
 };
 
-export const RickAPI = () => {
+export const RickData = () => {
   const [results, setResults] = useState<resultProps[]>([]);
   const [randomIndex, setRandomIndex] = useState<number>(0);
+  const url = `https://rickandmortyapi.com/api/character`;
 
   const random = useCallback(() => {
     const arrayLength = results.length;
@@ -21,7 +22,7 @@ export const RickAPI = () => {
 
   useEffect(() => {
     const api = async () => {
-      const data = await fetch(`https://rickandmortyapi.com/api/character`, {
+      const data = await fetch(url, {
         method: "GET",
       });
       const jsonData = await data.json();

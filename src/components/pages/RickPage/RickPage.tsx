@@ -1,6 +1,6 @@
 import React from "react";
-import { RickAPI } from "../../RickAPI";
+import { RickData } from "../../RickAPI";
 
 export const RickPage = () => {
-  return <RickAPI />;
+  return <RickData />;
 };
