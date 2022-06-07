@@ -5,6 +5,7 @@ type resultProps = {
   name: string;
   gender: string;
   species: string;
+  image: string;
 };
 
 export const RickPage = () => {
@@ -48,6 +49,10 @@ export const RickPage = () => {
       <Button variant="contained" onClick={random}>
         Random
       </Button>
+      <div>
+        <br />
+        <img src={results[randomIndex]?.image} alt="" />
+      </div>
     </div>
   );
 };
