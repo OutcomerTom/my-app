@@ -1,0 +1,1 @@
+export { RickData } from "./RickAPI";

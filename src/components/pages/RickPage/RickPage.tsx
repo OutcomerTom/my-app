@@ -1,9 +1,11 @@
 import React from "react";
+import { Layout } from "../../Layout";
+import { RickData } from "../../RickAPI";
 
 export const RickPage = () => {
   return (
-    <>
-      <div>About Rick and Morty API</div>
-    </>
+    <Layout>
+      <RickData />
+    </Layout>
   );
 };

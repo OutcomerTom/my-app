@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
+import { Box } from "@mui/material";
 
 export const Counter = () => {
   const [counter, setCounter] = useState<number>(0);
@@ -13,14 +14,14 @@ export const Counter = () => {
   }, []);
 
   return (
-    <>
+    <Box>
       <div>CounterPage</div>
-      <hr />
+      <Box m="10px" />
       <div>{`Alert was shown: ${counter} times`}</div>
-      <hr />
+      <Box m="10px" />
       <Button onClick={() => handleShowAlert(0)} variant="outlined">
         Show Alert
       </Button>
-    </>
+    </Box>
   );
 };
