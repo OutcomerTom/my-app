@@ -1,10 +1,14 @@
 import React from "react";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
+import { Box } from "@mui/material";
+import { Layout } from "../../Layout";
 
 export const HomePage = () => {
   return (
-    <div>
-      <hr />
+    <Layout>
+      <Box>
+        This is homePage site
+        {/* <hr />
       <Button
         variant="contained"
         onClick={() =>
@@ -14,7 +18,8 @@ export const HomePage = () => {
         Go to repo
       </Button>
 
-      <hr />
-    </div>
+      <hr /> */}
+      </Box>
+    </Layout>
   );
 };

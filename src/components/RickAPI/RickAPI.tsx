@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Button from "@mui/material/Button";
+import { Box } from "@mui/material";
 
 type resultProps = {
   name: string;
@@ -20,22 +21,22 @@ export const RickData = () => {
     setRandomIndex(randomIndex);
   }, [results]);
 
-  useEffect(() => {
-    const api = async () => {
-      const data = await fetch(url, {
-        method: "GET",
-      });
-      const jsonData = await data.json();
-      setResults(jsonData.results);
-      random();
-    };
+  const api = async () => {
+    const data = await fetch(url, {
+      method: "GET",
+    });
+    const jsonData = await data.json();
+    setResults(jsonData.results);
+    random();
+  };
 
+  useEffect(() => {
     api();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div className="RickPage">
+    <Box>
       <h1>
         <div>
           <div>{results[randomIndex]?.name}</div>
@@ -50,10 +51,9 @@ export const RickData = () => {
       <Button variant="contained" onClick={random}>
         Random
       </Button>
-      <div>
-        <br />
+      <Box m="1em">
         <img src={results[randomIndex]?.image} alt="" />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };

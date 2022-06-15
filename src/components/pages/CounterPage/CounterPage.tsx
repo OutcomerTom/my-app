@@ -1,6 +1,11 @@
 import React from "react";
 import * as Counter from "../../Counter";
+import { Layout } from "../../Layout";
 
 export const CounterPage = () => {
-  return <Counter.Counter />;
+  return (
+    <Layout>
+      <Counter.Counter />;
+    </Layout>
+  );
 };
